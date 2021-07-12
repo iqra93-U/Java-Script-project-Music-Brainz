@@ -1,0 +1,189 @@
+:root{
+  --white:hsl(0, 0%, 100%);
+  --red: #ef5e5e;
+  --node:rgba(255, 255, 255, 0.5);
+  --dark-red: #130606;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+button{
+  color:var(--red);
+  background-color: var(--white);
+}
+button:hover{
+  background-color:var(--red);
+  color: var(--white);
+
+}
+select {
+  width: 100%;
+  padding:10px;
+  border-radius:10px;
+}
+input {
+  display:block;
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border: 1px solid #eee;
+  transition: .3s border-color;
+  margin-bottom: 3rem;;
+
+}
+
+input:hover {
+  border: 1px solid #aaa;
+}
+.main-container{
+  max-width: 85%;
+  margin-left: auto;
+  margin-right:auto ;
+  margin-top: 1rem;;
+}
+.bar{
+  width: 4px;
+  height:5px;
+  margin-left: 1px;
+  background-color:var(--red);
+  display: inline-block;
+  transform-style:preserve-3d;
+  animation: music 2s infinite cubic-bezier(.77,0,.18,1);
+}
+
+.bar:nth-of-type(2){
+  animation-delay: 0.2s;    
+}
+.bar:nth-of-type(3){
+  animation-delay: .4s;
+}
+.bar:nth-of-type(4){
+animation-delay: .6s;
+}
+
+.bar:nth-of-type(5){
+  animation-delay:.8s;
+}
+
+.bar:nth-of-type(6){
+  animation-delay:1s;
+}
+
+.bar:nth-of-type(7){
+  animation-delay:1.2s;
+}
+
+.bar:nth-of-type(8){
+  animation-delay:1.4s;
+
+}
+.bar:nth-of-type(9){
+
+  animation-delay:1.6s;
+}
+
+
+.bar:last-of-type{
+
+  animation-delay: 1.8s;
+
+}
+@keyframes music{
+  0%{
+      height: 20px; 
+  }
+  25%{
+  height:30px;
+  transform:translateZ(30px);
+  }
+  50%{
+      height: 60px;  
+  }
+      
+
+}
+.searching-bar-btn{
+  display: flex;
+ 
+}
+#searchResults{
+  color: var(--red);
+}
+.header{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+#spinner {
+  overflow: hidden;
+  display: none;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 70%;
+  /* height: 100%; Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+#newdata {
+  font-size: large !important;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin:auto; /* 15% from the top and centered */
+  margin-top: 6rem;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 70%; /* Could be more or less, depending on screen size */
+}
+.covers {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 100%;
+}
+#noteParent {
+  display: flex;
+  flex-direction: row;
+}
+
+.poster {
+  width: 100%;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mytable {
+  width: 50% !important;
+  margin: 2em 10em 2em 0 !important;
+}
+#modalClose {
+  width: min-content;
+  margin-left: 95%;
+}
+img {
+  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
